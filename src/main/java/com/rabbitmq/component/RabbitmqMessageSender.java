@@ -33,8 +33,13 @@ public class RabbitmqMessageSender implements CommandLineRunner {
 		bookDetailDTO.setYear(2019);
 
 		byte[] data = SerializationUtils.serialize(bookDetailDTO);
+		// TODO : Need to convert DTO to JSON, sending java object is not ideal approach
+
+		System.out.println("DTO Data object has been successfully serialize before sending to rabbitmq");
 
 		rabbitTemplate.convertAndSend(Constant.SINGH_BOOK_PUBLISHER_EX, Constant.SINGH_BOOK_PUBLISHER_RK, data);
+
+		System.out.println("Message has been post successfully to rabbitmq");
 
 	}
 
