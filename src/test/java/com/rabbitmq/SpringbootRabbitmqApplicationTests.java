@@ -10,7 +10,7 @@ import com.rabbitmq.component.RabbitmqMessageSender;
 
 /**
  * @author bharat
- * @since 1.0
+ * @since 1.0.0
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringbootRabbitmqApplication.class)
