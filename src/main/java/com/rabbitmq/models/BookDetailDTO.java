@@ -1,4 +1,4 @@
-package com.rabbitmq.Models;
+package com.rabbitmq.models;
 
 /**
  * @author bharat

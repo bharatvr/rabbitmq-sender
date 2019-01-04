@@ -5,13 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author bharat
- * @since 1.0
+ * @since 1.0.0
  */
 @SpringBootApplication
 public class SpringbootRabbitmqApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootRabbitmqApplication.class, args).close();
+		SpringApplication.run(SpringbootRabbitmqApplication.class, args);
 
 	}
 
