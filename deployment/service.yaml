@@ -2,10 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   name: rabbitmq-producer
+  annotations:
+    netscaler.applecloud.io/service.class: netscaler.v2
 spec:
+  type: LoadBalancer
   ports:
-    - name: http
-      port: 8081
+    - port: 8081
       targetPort: 8081
   selector:
     app: rabbitmq-producer
