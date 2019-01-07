@@ -1,0 +1,31 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rabbitmq-producer
+  labels:
+    app: rabbitmq-producer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rabbitmq-producer
+  template:
+    metadata:
+      labels:
+        app: rabbitmq-producer
+    spec:
+      containers:
+        - name: rabbitmq-producer
+          image: docker.apple.com/gbi-fw/rabbitmq-producer:1.0.0
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8081
+              name: http
+          resources:
+            requests:
+              memory: 8Gi
+              cpu: 2
+            limits:
+              memory: 16Gi
+              cpu: 2
+      restartPolicy: Always
